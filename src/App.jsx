@@ -23,7 +23,9 @@ import DocumentVerification from "./Components/UserManagement/Client/DocumentVer
 import PendingApproval from "./Components/UserManagement/Client/PendingApproval";
 import Subscription from "./Components/Subscription/Subscription";
 
+
 function App() {
+  
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedModule, setSelectedModule] = useState();
   const [animate, setAnimate] = useState(false);
@@ -32,7 +34,9 @@ function App() {
   const [clientData, setClientData] = useState();
   const userId = sessionStorage.getItem("LoginUserId");
 
+  const base = import.meta.env.BASE_URL;
 
+  console.log(base, "base ")
   useEffect(() => {
     const token = sessionStorage.getItem("token");
     const LoginId = sessionStorage.getItem("LoginUserId");
@@ -57,7 +61,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename={base}>
         <ToastContainer
           position="top-center"
           autoClose={2000}
@@ -89,20 +93,20 @@ function App() {
                 <div className="mt-[1vw] px-[2vw]">
                   <div className=" bg-[#FFFFFF4D] w-full px-[3vw] rounded-2xl shadow-md h-[86vh]">
                     <Routes className="">
-                      <Route path="/profile" element={<ProfilePage />} />
-                      <Route path="/sales" element={<Sales />} />
-                      <Route path="/purchase" element={<Purchase />} />
-                      <Route path="/roles" element={<Roles />} />
-                      <Route path="/mastersetup" element={<Master />} />
-                      <Route path="/dataanalytics" element={<Analytics />} />
-                      <Route path="/settings" element={<Settings />} />
-                      <Route path="/subscription" element={<Subscription />} />
+                      <Route path="profile" element={<ProfilePage />} />
+                      <Route path="sales" element={<Sales />} />
+                      <Route path="purchase" element={<Purchase />} />
+                      <Route path="roles" element={<Roles />} />
+                      <Route path="mastersetup" element={<Master />} />
+                      <Route path="dataanalytics" element={<Analytics />} />
+                      <Route path="settings" element={<Settings />} />
+                      <Route path="subscription" element={<Subscription />} />
                       <Route
-                        path="/requestManagement"
+                        path="requestManagement"
                         element={<RequestManagement />}
                       />
                       <Route
-                        path="/usermanagement"
+                        path="usermanagement"
                         element={
                           <UserProvider>
                             <UserManagement />
@@ -118,7 +122,7 @@ function App() {
         ) : (
           <Routes>
             <Route
-              path="/client/:clientId"
+              path="client/:clientId"
               element={
                 <LoginProvider>
                   <Login
@@ -130,7 +134,7 @@ function App() {
               }
             />
             <Route
-              path="/employee"
+              path="employee"
               element={
                 <LoginProvider>
                   <Login
