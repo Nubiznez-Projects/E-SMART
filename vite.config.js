@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/E-SMART/',
+  base: '/E-SMART/client',
   plugins: [
   react(),
   tailwindcss()

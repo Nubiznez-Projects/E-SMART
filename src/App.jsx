@@ -36,7 +36,7 @@ function App() {
 
   const base = import.meta.env.BASE_URL;
 
-  console.log(base, "base ")
+
   useEffect(() => {
     const token = sessionStorage.getItem("token");
     const LoginId = sessionStorage.getItem("LoginUserId");
@@ -124,13 +124,11 @@ function App() {
             <Route
               path="client/:clientId"
               element={
-                <LoginProvider>
                   <Login
                   setClientData={setClientData}
                     setAuthtoken={setAuthtoken}
                     setSelectedModule={setSelectedModule}
                   />
-                </LoginProvider>
               }
             />
             <Route
