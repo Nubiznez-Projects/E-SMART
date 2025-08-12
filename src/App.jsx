@@ -122,7 +122,7 @@ function App() {
         ) : (
           <Routes>
             <Route
-              path="client/:clientId"
+              path=":clientId"
               element={
                   <Login
                   setClientData={setClientData}
@@ -132,7 +132,7 @@ function App() {
               }
             />
             <Route
-              path="employee"
+              path="/"
               element={
                 <LoginProvider>
                   <Login
