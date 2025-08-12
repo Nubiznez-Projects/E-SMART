@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 // import { ToastContainer } from 'react-toastify';
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -61,7 +61,7 @@ function App() {
 
   return (
     <>
-      <Router basename={base}>
+      <Router>
         <ToastContainer
           position="top-center"
           autoClose={2000}
@@ -122,7 +122,7 @@ function App() {
         ) : (
           <Routes>
             <Route
-              path=":clientId"
+              path="client/:clientId"
               element={
                   <Login
                   setClientData={setClientData}
@@ -132,7 +132,7 @@ function App() {
               }
             />
             <Route
-              path="/"
+              path="employee"
               element={
                 <LoginProvider>
                   <Login
