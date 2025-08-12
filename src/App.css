@@ -1,0 +1,671 @@
+@import "tailwindcss";
+
+/* Hide scrollbar but allow scroll */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+#root {
+  background: linear-gradient(108.05deg, #ebdfbc 1.01%, #bac9ec 100.4%);
+  height: 100%; /* ✅ No quotes here */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Table Design */
+
+.ant-table-thead > tr > th {
+  background-color: #f9f9f9 !important;
+  color: #323232 !important;
+  font-weight: bold;
+  text-align: center;
+  height: 1.5vw;
+  padding: 0.1vw;
+}
+
+.ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:first-child {
+  border-start-start-radius: 1vw;
+}
+
+:where(.css-dev-only-do-not-override-1mdupe8).ant-table-wrapper
+  .ant-table-tbody
+  > tr
+  > th,
+:where(.css-dev-only-do-not-override-1mdupe8).ant-table-wrapper
+  .ant-table-tbody
+  > tr
+  > td,
+:where(.css-dev-only-do-not-override-1mdupe8).ant-table-wrapper tfoot > tr > th,
+:where(.css-dev-only-do-not-override-1mdupe8).ant-table-wrapper
+  tfoot
+  > tr
+  > td {
+  padding: 0vw !important;
+}
+.ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:first-child {
+  border-start-start-radius: 1vw;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
+
+.ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:last-child {
+  border-start-end-radius: 1vw;
+  border-top-right-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+
+/* Add visible border & spacing to each row */
+.ant-table-tbody > tr {
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.5) !important; /* Row background */
+  height: 2vw;
+  border: 1vw solid rgb(39, 38, 38) !important;
+}
+
+/* Ensure row remains aligned */
+.ant-table-tbody > tr > td:first-child {
+  border-top-left-radius: 3vw !important;
+  border-bottom-left-radius: 3vw !important;
+}
+
+.ant-table-tbody > tr > td:last-child {
+  border-top-right-radius: 3vw !important;
+  border-bottom-right-radius: 3vw !important;
+}
+
+.ant-table-wrapper table {
+  width: 100%;
+  text-align: start;
+  border-collapse: separate; /* Allows spacing to be applied */
+  border-spacing: 0 0.4vw; /* 0 for columns, 8px for row spacing */
+  background: #ff000000 !important;
+}
+
+.ant-table-wrapper .ant-table {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background: #ffffff00 !important;
+  border-radius: 8px 8px 0 0;
+  scrollbar-color: rgba(0, 0, 0, 0.25) rgba(5, 5, 5, 0.06);
+}
+
+.ant-table-wrapper .ant-table-cell,
+.ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th {
+  position: relative;
+  padding: 0.3vw !important;
+  overflow-wrap: break-word;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+/* Date Picker */
+
+:where(.css-dev-only-do-not-override-ut69n1).ant-picker-outlined {
+  background: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  height: 2.25vw !important;
+  border-radius: 0.6vw;
+}
+
+:where(.css-dev-only-do-not-override-ut69n1).ant-picker
+  .ant-picker-input
+  > input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  /* color: inherit; */
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  transition: all 0.2s;
+  flex: auto;
+  min-width: 1px;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: 0.9vw !important;
+  color: #000000 !important;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* status selection */
+
+:where(.css-dev-only-do-not-override-1mewakn).ant-select-single {
+  font-size: 1.1vw;
+  height: 2.25vw !important;
+}
+
+:where(.css-dev-only-do-not-override-1mewakn).ant-select-outlined:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  border: 1px solid #d9d9d9;
+  background: #ffffff;
+  height: 2.25vw !important;
+  border-radius: 0.6vw;
+}
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+/* 
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* .ant-spin-nested-loading {
+  position: relative;
+  height: 68vh !important;
+} */
+
+.ant-spin-nested-loading .ant-spin-container {
+  position: relative;
+  transition: opacity 0.3s;
+  height: fit-content !important;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Hide the date display wrapper */
+.rdrDateDisplayWrapper {
+  display: none !important;
+}
+
+/* Hide the month and year pickers */
+.rdrMonthAndYearPickers {
+  display: none !important;
+}
+
+/* Hide the defined ranges wrapper (e.g., Last Week, Last Month) */
+.rdrDefinedRangesWrapper {
+  display: none !important;
+}
+
+.rdrCalendarWrapper {
+  width: 29vw !important;
+  height: 16.2vw !important;
+}
+
+.rdrMonthName {
+  text-align: center !important;
+  margin-top: -1vw !important;
+}
+
+.rdrCalendarWrapper {
+  color: #000000;
+  font-size: 0.7vw !important;
+}
+
+.rdrMonthAndYearWrapper {
+  align-items: center;
+  height: 1vw !important;
+  padding-top: 1vw !important;
+}
+
+/* Custom Footer buttons styling */
+.footer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom-right-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  gap: 0.5vw;
+  padding: 0.5vw;
+  background-color: #ffffff;
+  border-top: 0.1vw solid #ddd;
+}
+
+element.style {
+  color: rgb(204, 219, 238);
+}
+
+/* Hide default number input arrows for all browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  width: 17vw;
+  height: 8vw;
+  box-shadow: -4px 4px 6px #a2be9a80;
+}
+
+#country option {
+  padding: 0;
+  height: 1vw ; /* Not guaranteed to work everywhere */
+}
+
+.custom-select .ant-select-selection-placeholder,
+.custom-select .ant-select-selection-item {
+  font-size: 0.84vw !important; /* or 2vw as per your design */
+  color: #666; /* optional */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.custom-range-picker .ant-picker-input > input {
+  font-size: 0.85vw !important;
+  text-align: center;
+}
+
+.custom-range-picker .ant-picker-input > input::placeholder {
+  font-size: 0.80vw !important;
+  color: #888;
+  text-align: center;
+}
+
+
+.force-pointer .ant-picker-input input {
+  cursor: pointer !important;
+}
+
+
+
+/* -----------------------------customized-table-css---------------------------------- */
+
+.custom-table .ant-table-tbody .ant-table-measure-row {
+  display: none !important;
+  visibility: hidden;
+  height: 0;
+}
+
+/* Table Header Styling */
+.custom-table .ant-table-thead > tr > th {
+  background-color: #eadfbc80 !important;
+  color: black !important;
+  text-align: center;
+  height: 6vh !important;
+}
+
+/* Ensure sorting icons are white and visible */
+.custom-table .ant-table-column-sorter {
+  /* Makes sort icons white */
+  opacity: 1 !important;
+  /* Ensure icons are fully visible */
+  display: inline-flex !important;
+  /* Ensures it is displayed */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+/* Force sorting arrows to be visible */
+.custom-table .ant-table-column-sorter .anticon {
+  font-size: 0.7vw !important;
+  /* White color */
+}
+
+/* Ensure the sorting icons are aligned properly */
+
+/* Fix table header for better alignment */
+.custom-table .ant-table-thead th {
+  position: relative;
+  cursor: pointer;
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.custom-table
+  .ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:first-child {
+  border-start-start-radius: 0.6vw;
+}
+
+.custom-table
+  .ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:first-child {
+  border-start-start-radius: 0.5vw;
+  border-top-left-radius: 0.5vw;
+  border-bottom-left-radius: 0.5vw;
+}
+
+.custom-table
+  .ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:last-child {
+  border-start-end-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+}
+
+/* Add top and bottom borders to rows */
+.custom-table .ant-table-tbody > tr > td {
+  border-top: 2px solid #e6e6e9 !important;
+  /* Top border */
+  border-bottom: 2px solid #e6e6e9 !important;
+  /* Bottom border */
+}
+
+/* Apply left border to first column */
+.custom-table .ant-table-tbody > tr > td:first-child {
+  border-left: 2px solid #e6e6e9 !important;
+}
+
+/* Apply right border to last column */
+.custom-table .ant-table-tbody > tr > td:last-child {
+  border-right: 2px solid #e6e6e9 !important;
+}
+
+/* Row background */
+.custom-table .ant-table-tbody > tr {
+  background: #ffffff !important;
+}
+
+/* Ensure row remains aligned */
+.custom-table .ant-table-tbody > tr > td:first-child {
+  border-top-left-radius: 0.5vw !important;
+  border-bottom-left-radius: 0.5vw !important;
+}
+
+.custom-table .ant-table-tbody > tr > td:last-child {
+  border-top-right-radius: 0.5vw !important;
+  border-bottom-right-radius: 0.5vw !important;
+}
+
+.custom-table table {
+  width: 100%;
+  text-align: start;
+  /* height: 77.3vh !important; */
+  border-collapse: separate !important;
+  /* Force separation */
+  border-spacing: 0 0.5vw !important;
+  /* Space between rows */
+  background: #ffffff !important;
+}
+
+.ant-table-wrapper
+  .ant-table-cell-fix-left,
+.ant-table-wrapper
+  .ant-table-cell-fix-right {
+  position: sticky !important;
+  z-index: 2;
+  background: #f7f7f9 !important;
+}
+
+.custom-table .ant-table-cell,
+.custom-table .ant-table-thead > tr > th,
+.custom-table .ant-table-tbody > tr > th,
+.custom-table .ant-table-tbody > tr > td,
+.custom-table tfoot > tr > th,
+.custom-table tfoot > tr > td {
+  position: relative;
+  padding: 0.5vw 0.5vw !important;
+  overflow-wrap: break-word;
+}
+
+/* ------Table style end-------   */
+
+.custom-table .ant-table-thead th {
+  position: relative;
+  cursor: pointer;
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.custom-table
+  .ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:first-child {
+  border-start-start-radius: 0.6vw;
+}
+
+.custom-table
+  .ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:first-child {
+  border-start-start-radius: 0.5vw;
+  border-top-left-radius: 0.5vw;
+  border-bottom-left-radius: 0.5vw;
+}
+
+.custom-table
+  .ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:last-child {
+  border-start-end-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+}
+
+.customSales-table .ant-table-thead > tr > th {
+  background-color: #BAC9EC4D !important; /* Change to your desired header background */
+}
+
+.customSales-table .ant-table-thead th {
+  position: relative;
+  cursor: pointer;
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.customSales-table .ant-table-tbody > tr {
+  background: #ffffff !important;
+}
+
+/* Ensure row remains aligned */
+.customSales-table .ant-table-tbody > tr > td:first-child {
+  border-top-left-radius: 0.5vw !important;
+  border-bottom-left-radius: 0.5vw !important;
+}
+
+.customSales-table .ant-table-tbody > tr > td:last-child {
+  border-top-right-radius: 0.5vw !important;
+  border-bottom-right-radius: 0.5vw !important;
+}
+
+.customSales-table .ant-table-cell,
+.customSales-table .ant-table-thead > tr > th,
+.customSales-table .ant-table-tbody > tr > th,
+.customSales-table .ant-table-tbody > tr > td,
+.customSales-table tfoot > tr > th,
+.customSales-table tfoot > tr > td {
+  position: relative;
+  padding: 0.7vw 0.9vw !important;
+  overflow-wrap: break-word;
+}
+
+
+.slanted-header {
+  background-color: #BDCAE9;
+  padding: 0.5rem;
+  border: 0.1vw solid white;
+  height: 2vw;
+  transform: skew(-2deg);
+  color: #1f2937;
+  overflow: hidden;
+}
+
+/* Inner div to cancel the skew for text */
+.slanted-header > .inner-text {
+  transform: skew(12deg);  /* un-skew the text */
+  display: block;
+}
+
+
+/*<----------------Progress Bar--------------------> */
+/* Add this to your CSS */
+.custom-progress::-webkit-progress-bar {
+  background-color: #e5e7eb; /* Tailwind's gray-200 */
+  border-radius: 0.5rem;     /* rounded */
+}
+
+.custom-progress::-webkit-progress-value {
+  background-color: #dc3546; /* Tailwind's green-400 */
+  border-radius: 0.5rem;
+}
+
+.custom-progress::-moz-progress-bar {
+  background-color: #dc3546;
+  border-radius: 0.5rem;
+}
+
+.efficiency-progress::-webkit-progress-bar {
+  background-color: #e5e7eb; /* Tailwind's gray-200 */
+  border-radius: 0.5rem;     /* rounded */
+}
+
+.efficiency-progress::-webkit-progress-value {
+  background-color: #fec107; /* Tailwind's green-400 */
+  border-radius: 0.5rem;
+}
+
+.efficiency-progress::-moz-progress-bar {
+  background-color: #fec107;
+  border-radius: 0.5rem;
+}
+
+
+.expand-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}
+
+.expand-content.show {
+  max-height: 2vw; /* Adjust based on expected content height */
+  opacity: 1;
+}
+
+
+/* Custom size for upload box and uploaded image */
+.custom-upload .ant-upload-list-item,
+.custom-upload .ant-upload.ant-upload-select-picture-card {
+  width: 8vw !important;
+  height: 8vw !important;
+}
+
+.custom-upload .ant-upload-list-item-thumbnail img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4vw;
+}
+
+

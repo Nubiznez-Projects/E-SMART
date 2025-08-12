@@ -1,0 +1,159 @@
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-title {
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #333;
+}
+
+.notification-tabs {
+  display: flex;
+  gap: 1vw;
+  font-size: 0.9vw;
+  padding-bottom: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.notification-tabs .tab {
+  cursor: pointer;
+  color: #777;
+  padding-bottom: 0.3vw;
+}
+
+.notification-tabs .tab.active {
+  color: #1f4b7f;
+  border-bottom: 2px solid #1f4b7f;
+  font-weight: 500;
+}
+
+.mark-as-read {
+  font-size: 0.85vw;
+  color: #1f4b7f;
+  cursor: pointer;
+}
+
+.search-and-options {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw; /* Added margin-bottom for spacing */
+}
+
+.notification-search-input {
+  background-color: #f0f0f0; /* Light background for search input */
+  outline: none;
+  padding-left: 2.5vw; /* Make space for the icon */
+  padding-right: 1vw;
+  width: 100%;
+  height: 4.5vh; /* Adjusted height for better appearance */
+  font-size: 0.9vw;
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 0.5vw;
+}
+
+.notification-list-container {
+  overflow-y: auto;
+  max-height: calc(
+    90vh - 12vw
+  ); /* Adjust this value based on header/search height */
+  padding-right: 0.5vw; /* For scrollbar spacing */
+}
+
+.notification-date-header {
+  font-size: 1vw;
+  font-weight: bold;
+  color: #333;
+  margin-top: 1vw;
+  margin-bottom: 0.8vw;
+}
+
+.notification-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the top for message wrapping */
+  gap: 1vw;
+  padding: 0.8vw 0; /* Padding for each notification item */
+  border-bottom: 1px solid #eee; /* Subtle separator */
+  cursor: pointer;
+}
+
+.notification-item:last-child {
+  border-bottom: none; /* No border for the last item in a group */
+}
+
+.notification-avatar-wrapper {
+  flex-shrink: 0; /* Prevent avatar from shrinking */
+  padding-top: 0.2vw; /* Align avatar with text baseline */
+}
+
+.notification-avatar {
+  width: 2.5vw; /* Slightly larger avatar */
+  height: 2.5vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-message-content {
+  flex-grow: 1; /* Allow message content to take available space */
+}
+
+.notification-user-name {
+  font-size: 0.95vw;
+  font-weight: 500; /* Medium font weight */
+  color: #333;
+  line-height: 1.2; /* Better line spacing */
+}
+
+.notification-time {
+  flex-shrink: 0; /* Prevent time from shrinking */
+  font-size: 0.8vw;
+  color: #777;
+  padding-top: 0.2vw; /* Align time with message */
+}
+
+/* Existing modal CSS - keep these if you're using a modal wrapper */
+.modal-overlayn {
+  position: absolute;
+  top: 5vw;
+  left: 0;
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: flex-end; /* Changed to flex-end to position on the right */
+  align-items: flex-start; /* Changed to flex-start to position at the top */
+  z-index: 1000;
+  /* padding-top: 5vw; Adjust as needed for top positioning */
+  padding-right: 2vw; /* Adjust as needed for right positioning */
+}
+
+.modal-contentn {
+  background-color: white;
+  padding: 1vw;
+  border-radius: 1vw;
+  box-shadow: 0 0.1vw 0.5vw rgba(0, 0, 0, 0.1);
+  max-height: 90vh; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-closen {
+  position: absolute;
+  top: 1vw;
+  right: 0.8vw;
+  background: none;
+  border-radius: 50%;
+  font-size: 1.3vw;
+  cursor: pointer;
+  background-color: #1f4b7f;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

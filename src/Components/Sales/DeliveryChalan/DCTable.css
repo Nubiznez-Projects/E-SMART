@@ -1,0 +1,23 @@
+/* Tailwind handles most of this, but you can fine-tune: */
+
+.DCcustom-table .ant-table {
+  border-spacing: 0px;
+  border-collapse: separate;
+}
+
+.DCcustom-table .ant-table-thead > tr > th {
+  background-color: #BAC9EC4D !important; /* Change to your desired header background */
+   font-weight: 600;
+  font-size: 0.85vw;
+  padding: 0.6vw 0.5vw;
+}
+
+.DCcustom-table .ant-table-tbody > tr > td {
+  padding: 0.5vw 0.5vw;
+  font-size: 0.85vw;
+}
+
+.DCcustom-table .ant-table-tbody > tr {
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
